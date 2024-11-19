@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #111;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('stream-binary.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid #0f0;
+    padding: 40px; /* Increased padding */
+    background: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 15px #00ff00;
+    border-radius: 15px; /* Increased border radius */
+    max-width: 1000px; /* Increased max width */
+    width: 90%;
+    animation: slideIn 1s ease-out; /* Slide-in animation */
+}
+
+h1, h2, h3, p {
+    letter-spacing: 2px; /* Increased letter spacing */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00; /* Glowing effect */
+    animation: glow 2s infinite alternate;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+nav a {
+    color: #0f0;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 15px;
+    letter-spacing: 1px; /* Increased letter spacing */
+    border: 1px solid #0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background: #0f0;
+    color: #111;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+/* Page Transition Effects */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fade-Out Effect */
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Glowing Text Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    }
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
